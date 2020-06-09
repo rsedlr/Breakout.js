@@ -15,11 +15,11 @@ class Block {
 
   hit(ball) {
     var a = false
-    if (collides(ball.pos.x + ball.vel.x, ball.pos.y, ball.rad)) {
+    if (this.collides(ball.pos.x + ball.vel.x, ball.pos.y, ball.rad)) {
       ball.vel.x *= -1
       a = true
     }
-    if (collides(ball.pos.x, ball.pos.y + ball.vel.y, ball.rad)) {
+    if (this.collides(ball.pos.x, ball.pos.y + ball.vel.y, ball.rad)) {
       ball.vel.y *= -1
       a = true
     }
